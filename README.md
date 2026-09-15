@@ -10,7 +10,7 @@ relationship between environmental conditions (temperature, humidity, time)
 and appliance energy consumption in a low-energy Belgian house.
 
 ## Dataset
-- Source: UCI Machine Learning Repository — energydata_complete
+- Source: UCI Machine Learning Repository - energydata_complete
 - 19,735 observations, 28 features
 - Target: Appliances energy use (Wh)
 - Features: Temperature/humidity from 9 room sensors + outdoor weather data
