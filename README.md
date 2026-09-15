@@ -30,10 +30,12 @@ and appliance energy consumption in a low-energy Belgian house.
 | Ridge | 53.572 | 93.709 | 0.148 |
 | Lasso | 58.354 | 99.424 | 0.041 | 
 
-**Key finding:** Lasso regularisation reduced the effective feature set while
-maintaining comparable predictive accuracy, suggesting several sensor readings
-are redundant for predicting appliance energy use.
-
+**Key finding:** 
+- Lasso with the default penalty (alpha=1.0) retained only 4 of 26 features but degraded test R² from 0.149 to 0.041 (RMSE 93.6 → 99.4).
+- Because no alpha tuning was performed, this sparsity reflects an untuned hyperparameter rather than evidence of feature redundancy.
+- Linear and Ridge produced near-identical test metrics (R² 0.149 vs 0.148), consistent with minimal multicollinearity among the sensor features.
+**- Next step:** apply LassoCV and inspect the surviving coefficients before drawing conclusions about which sensor readings are redundant.
+  
 ## Tools
 Python · Pandas · NumPy · Scikit-learn · Matplotlib
 
